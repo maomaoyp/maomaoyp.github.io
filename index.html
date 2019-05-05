@@ -315,7 +315,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/05/05/test/" itemprop="url">快应用踩坑记录</a></h1>
+                <a class="post-title-link" href="/2019/05/05/test/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -367,7 +367,261 @@
       
         
           
-            <p>你好啊，我是快应用</p>
+            <p>title: 快应用踩坑记录<br>date: 2019-05-05 20:00:44<br>tags: 快应用</p>
+<h1 id="快应用的那些事"><a href="#快应用的那些事" class="headerlink" title="快应用的那些事"></a>快应用的那些事</h1><pre><code>  说起快应用，大家的第一反应就是，什么是快应用？ 一个陌生又新鲜的词汇。 让人忍不住想去知道它，了解它，进而使用它。
+
+ 快应用：是十大手机厂商基于硬件平台共同推出的新型应用生态。简单概括来说就是不用下载， 随点随用，却还能享受原生应用的性能体验。
+
+  作为前端开发人员，时刻关注着前端的新型技术，了解行业动态，把握新的技术，才能时刻保持自己能走在技术的前沿。快应用的兴起，给安卓市场带来了巨大的改变。改变有很多方式，对于投资和开发的角度来讲，效果和投入产出比至关重要。九大厂商共建的快应用标准，最大的优势在于降低了开发者的开发和推广成本，有了这个标准，开发者可以做到一次性开发，各大手机厂商都能运行，极大地减少了开发成本。
+
+  快应用的特征显而易见。使用的是我们前端技术开发，原生渲染，同时具备了HTML5 和 原生应用的双重优点，不用安装，点开使用，享受一样的体验。使得用户通过自己的手机更容易获取自己所需的服务。 不必存储，一键直达，更新直接推送。 更快更好的享受快应用所带来的快感和便捷。
+
+快应用现在的发展趋势迅速， 例如豆瓣评分，饿了么，时光时钟，王者荣耀盒子等都有快应用。你不需要去下载，也可以直接去搜索美食，不需要去下载也可以关注时间，不需要去下载， 你可以看到游戏盒子。 随随便便的搜一搜点一点， 你就能覆盖你生活的需求，满足你搜索的需要。这就是快应用所想给人带来的极致体验。
+
+ 作为开发者，除了跟大家分享快应用，我也希望能将我开发中的一些总结，一些问题的发现，一些bug的总结，跟大家进行分享。希望作为快应用的支持者，能在此和大家共同了解快应用，学习快应用，使用快应用。 能让快应用以更好的姿态融入到我们的生活当中。
+</code></pre><p>关于快应用的大家进行分享详情可参照快应用官网<strong><a href="https://doc.quickapp.cn/tutorial/ide/" target="_blank" rel="noopener">https://doc.quickapp.cn/tutorial/ide/</a></strong></p>
+<p><strong>1.1pc 安装toolkit工具</strong></p>
+<p><strong>1.1.1 安装nodeJs</strong></p>
+<p>安装过程： <a href="https://link.juejin.im/?target=https%3A%2F%2Fnodejs.org%2Fen%2F" target="_blank" rel="noopener">nodejs.org/en/</a> node官方地址进行下载 。安装版本在6.0以上</p>
+<p>安装后校验是否安装成功： node -v ，如果出现以下类似状态，则表示安装成功<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e45f123f7d373?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p><strong>1.1.2 安装hap-toolkit</strong></p>
+<p>通过npm命令安装</p>
+<p>命令: npm install -g hap-toolkit</p>
+<p>安装后校验是否安装成功：</p>
+<p>hap -V 【注意大写的 V】<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e45fdb7201468?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p><strong>1.2. 手机安装调试器</strong></p>
+<p>调试器是一个Android应用程序</p>
+<p><strong>1.2.1 快应用调试器</strong></p>
+<p>为了方便调试程序，您可以使用快应用调试器，这是一个Android应用程序，主要包含以下功能：</p>
+<p>· 扫码安装：配置HTTP服务器地址，下载rpk包，并唤起平台运行rpk包</p>
+<p>· 本地安装：选择手机文件系统中的rpk包，并唤起平台运行rpk包</p>
+<p>· 在线更新：重新发送HTTP请求，更新rpk包，并唤起平台运行rpk包</p>
+<p>· 开始调试：唤起平台运行rpk包，并启动远程调试工具</p>
+<p>调试器可以使用后， 在调试器安装rpk包 。</p>
+<p>快应用调试器可以连接到手机系统内的快应用执行环境（需要将系统升级到最新的正式版本），或者您可以单独下载安装快应用平台预览版来提供执行环境。</p>
+<p>下载调试器 【点击 <a href="https://link.juejin.im/?target=https%3A%2F%2Fwww.quickapp.cn%2FdocCenter%2Fpost%2F69" target="_blank" rel="noopener">www.quickapp.cn/docCenter/p…</a>】 点击下载调试器</p>
+<p>下载调试器 名称是 quickapp_debugger.apk 。将apk 通过qq传送到自己的手机 。 直接下载安装即可。</p>
+<p><strong>1.2.2 快应用预览版</strong></p>
+<p>当您的手机系统尚未内置快应用运行平台，或您想在开发过程中体验快应用尚未正式发布的新功能、新特性，您可以安装 <strong>快应用预览版。</strong></p>
+<p>下载版本目前有4个。分别是</p>
+<p>快应用预览版v1030</p>
+<p>快应用预览版v1020</p>
+<p>快应用预览版v1010</p>
+<p>快应用预览版v1000</p>
+<p>下载名称 类似于 【quickapp_platform_preview_release_v1020.apk 】 也可以通过qq传送。 下载到本机，然后通过快应用调试器-选择本地安装进行安装。<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e460ecac22f6b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p><img src="" alt="img"></p>
+<p>rpk 安装 =》 如果是qq接收， 地址一般是 ：本地安装 =》文件管理=》内部存储设备=》tencent（腾讯）=》QQfile_recv 找到下载的最新的文件 。（dist文件产出rpk包）</p>
+<p><strong>注意：</strong>如果需要安装低版本， 则需要<strong>先卸载</strong>之前的版本。</p>
+<p><strong>1.3 创建项目</strong></p>
+<p>toolkit工具和调试器安装完成以后，开始创建项目</p>
+<p><strong>1.3.1 建立项目模版</strong></p>
+<p>例如： hap init myproject</p>
+<p>myproject 为 <strong>项目名称</strong> ， 也是项目根目录</p>
+<p>myproject 则包含项目配置和示例初始代码。</p>
+<p>结构如下：<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e46165b1b11ec?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p>· <strong>src</strong>：项目源文件夹</p>
+<p>· <strong>sign</strong>：签名模块，当前仅有debug签名，如果内测上线，请添加release文件夹，增加线上签名；签名生成方法详见文档<a href="https://link.juejin.im/?target=https%3A%2F%2Fdoc.quickapp.cn%2Ftools%2Fcompiling-tools.html" target="_blank" rel="noopener">编译工具</a></p>
+<p>· <img src="https://user-gold-cdn.xitu.io/2018/12/25/167e461fee868f25?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p><strong>1.3.2</strong> <strong>安装依赖</strong></p>
+<p>npm install</p>
+<p>如果有报错 ：Cannot find module ‘…/node_modules/hap-tools/webpack.config.js’</p>
+<p>运行 hap update –force 执行后，<strong>不必</strong>再次执行 npm i</p>
+<p><strong>1.3.3 编译项目</strong></p>
+<p>手动编译， 在根目录下， 例如myproject 下。 运行</p>
+<p>npm run build</p>
+<p>编译打包成功后，项目根目录下会生成文件夹：<strong>build</strong>、<strong>dist</strong></p>
+<p>· <strong>build</strong>：临时产出，包含编译后的页面js，图片等</p>
+<p>· <strong>dist ：最终产出，包含rpk文件</strong>。其实是将build目录下的资源打包压缩为一个文件，后缀名为rpk，<strong>这个rpk文件就是项目编译后的最终产出</strong></p>
+<p>· <img src="https://user-gold-cdn.xitu.io/2018/12/25/167e462a4b47ac96?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p>自动编译项目（每次修改源代码文件后，都自动编译项目）</p>
+<p>npm run watch</p>
+<p><strong>1.3.4 启动http服务器</strong></p>
+<p>开启另一个窗口 ， 比如cmd开启或者 vscode新增一个窗口， 输入</p>
+<p>npm run server （推荐）</p>
+<p>也可以自定义端口（如：8080）</p>
+<p>npm run server – – port 8080</p>
+<p><strong>1.3.5 手机上预览运行效果</strong></p>
+<p>1 打开调试器， 点击扫码安装。可以扫码 npm run server的二维码（输入终端窗口提示的二维码），也可以复制npm run server 出现的地址 （输入终端窗口提示的http服务器地址）到浏览器生成二维码并扫码。【推荐】<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e463ddd4f34df?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"><img src="https://user-gold-cdn.xitu.io/2018/12/25/167e464531d363d1?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p>2打开调试器，点击右上角 menu ==》设置，输入终端窗口中http服务器地址</p>
+<p>【注意】：如果提示安装失败， 首先检查npm run server 是否正常 。 然后检查是否在一个网段。pc和手机是一个网段。 不可以开启360wifi一类的。</p>
+<p>试用场景： 预览或者低频率的更新rpk包。如果是长时间的浏览，可以直接将rpk qq发送到手机。 进行本地安装。<strong>rpk 安装 =》 如果是qq接收， 地址一般是 ：本地安装 =》文件管理=》内部存储设备=》tencent（腾讯）=》QQfile_recv 找到下载的最新的文件 。（dist文件产出rpk包）</strong></p>
+<p>安装成功的预览效果：<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e4651f302771b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p><strong>总结 ：</strong> 了解项目结构， 编译产生rpk ， 运行通过调节器安装rpk 。</p>
+<p><strong>1.4 . 代码编译配置-开发工具</strong></p>
+<p><strong>1.4.1</strong> <strong>使用 Visual Studio Code 开发</strong></p>
+<p>下载安装 : 点击跳转<a href="https://link.juejin.im/?target=https%3A%2F%2Fcode.visualstudio.com%2FDownload" target="_blank" rel="noopener">下载Visual Studio Code</a></p>
+<p>打开 vscode ， 打开项目。 点击左上角扩展，<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e465a751d0560?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img">此图标</p>
+<p>搜索 <strong>hap</strong> 安装 Hap Extension ==》点击重新加载 ，激活 Hap Extension<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e4665e27b8a19?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p><strong>1.4.2 使用WebStorm开发和sublime开发 请参照（</strong><a href="https://link.juejin.im/?target=https%3A%2F%2Fdoc.quickapp.cn%2Ftutorial%2Fgetting-started%2Fcode-edit-conf.html" target="_blank" rel="noopener"><strong>https://doc.quickapp.cn/tutorial/getting-started/code-edit-conf.html</strong></a><strong>）</strong></p>
+<p><strong>【推荐vscode】</strong></p>
+<p><strong>1.5 开发与调试</strong></p>
+<p><strong>1.5.1</strong> <strong>日志输出和日志查看</strong></p>
+<p><strong>日志输出</strong></p>
+<p>找到src文件夹的manifest.json，找到config配置，将logLevel修改为最低级别debug，即：允许所有级别的日志输出</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">　<span class="string">"config"</span>: &#123;</span><br><span class="line">　　<span class="string">"logLevel"</span>: <span class="string">"debug"</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>在js中输出日志（与传统前端开发一直）</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.debug(<span class="string">'debug'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'log'</span>)</span><br><span class="line"><span class="built_in">console</span>.info(<span class="string">'info'</span>)</span><br><span class="line"><span class="built_in">console</span>.warn(<span class="string">'warn'</span>)</span><br><span class="line"><span class="built_in">console</span>.error(<span class="string">'error'</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>查看日志</strong></p>
+<p>可以在浏览器控制台查看日志，也可以在编辑器终端窗口查看日志。</p>
+<p><strong>1.5.2</strong> <strong>远程调试</strong></p>
+<p>就是通过浏览器预览快应用。 启动服务器npm run server</p>
+<p>1编辑器提供扫码的二维码</p>
+<p>2快应用调试器-扫描按照-安装rpk文件</p>
+<p>3点击快应用调试器的-开始调试</p>
+<p><strong>1.6 项目配置信息</strong></p>
+<p>地址（<a href="https://link.juejin.im/?target=https%3A%2F%2Fdoc.quickapp.cn%2Ftutorial%2Fgetting-started%2Fproject-configuration.html" target="_blank" rel="noopener">doc.quickapp.cn/tutorial/ge…</a>）</p>
+<p><strong>1.6.1 配置应用基本信息</strong></p>
+<p>在manifest.json文件中</p>
+<p>（1）应用包名（package）</p>
+<p>格式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="string">"package"</span>: <span class="string">"com.example.demo"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>（2）应用名称（name）【6个汉字以内，与应用商店保存的名称一致，桌面显示的应用名也是】</p>
+<p>格式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="string">"name"</span>: <span class="string">"我是快应用"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>（3）应用图标（icon）【 正方形（<strong>不能</strong>是圆角），且务必<strong>无白边</strong>】</p>
+<p>格式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="string">"icon"</span>: <span class="string">"/Common/logo.png"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意【必须是<strong>绝对路径</strong> 】其中/对应于路径<myproject>/src/</myproject></p>
+<p>（4）应用版本名称、版本号（versionName、versionCode）【版本号 主版本.次版本 格式 ， 版本号从1开始，每次更新上架自增1 】</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="string">"versionName"</span>: <span class="string">"1.0"</span>,</span><br><span class="line"><span class="string">"versionCode"</span>: <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>demo ：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"versionName"</span>: <span class="string">"1.0.0.0"</span>,</span><br><span class="line"></span><br><span class="line"><span class="string">"versionCode"</span>: <span class="string">"1"</span>,</span><br></pre></td></tr></table></figure>
+<p>（5）支持的最小版本号（minPlatformVersion） 【最小是1000，小于1000请在提测前<a href="https://link.juejin.im/?target=https%3A%2F%2Fwww.quickapp.cn%2FdocCenter%2Fpost%2F69" target="_blank" rel="noopener">下载安装快应用平台内测版</a>，自测通过后提测】</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="string">"minPlatformVersion"</span>: <span class="number">1000</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>（6）配置接口列表（features）</p>
+<p>【注意】在使用接口时，必须先在manifest中声明接口。在每个接口文档的顶部，都附有声明接口的配置代码</p>
+<p>格式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="string">"features"</span>: [</span><br><span class="line">&#123; <span class="string">"name"</span>: <span class="string">"system.fetch"</span> &#125;</span><br><span class="line">]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>1.6.2</strong> <strong>配置页目录有（router）</strong></p>
+<p>注意【定义页面的<strong>实际地址</strong>、<strong>跳转地址</strong>。如果ux页面没有配置路由，则不参与项目编译（就是可以不配置）。一个目录下最多只能存在一个主页面文件（不包括组件文件）】</p>
+<p>（1）首页名称（router.<strong>entry</strong>）</p>
+<p>例如工程目录</p>
+<p>└── src<br>└── Demo 页面目录，存放各自页面私有的资源文件和组件文件<br>└── index.ux 页面文件，文件名不必与父文件夹相同（推荐index.ux）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="string">"router"</span>: &#123;</span><br><span class="line"><span class="string">"entry"</span>: <span class="string">"Demo"</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>则进入项目的第一个页面 为demo的index.ux 页面 （入口页）</p>
+<p>（2）页面路由对象（router.pages）</p>
+<p>页面路由对象， key为页面名称（src目录下，，页面目录的相对丼 ， value为页面具体路由配置， key<strong>不能</strong>重复）</p>
+<p>页面具体路由配置（<strong>router.pages的value</strong>）包括以下属性：</p>
+<p>· <strong>component</strong>：页面对应的ux文件名</p>
+<p>· <strong>path</strong>：页面路径，不填则默认为页面名称（<projectname>/src目录下，页面目录的<strong>相对路径</strong>）</projectname></p>
+<p><strong>demo 工程目录：</strong></p>
+<p>└── src<br>|── Demo 页面目录，存放各自页面私有的资源文件和组件文件<br>| └── index.ux 页面文件，文件名不必与父文件夹相同（推荐index.ux）<br>└── Doc<br>└── Layout 页面目录，存放各自页面私有的资源文件和组件文件<br>└── index.ux 页面文件，文件名不必与父文件夹相同（推荐index.ux）</p>
+<p>当页面名称（router.pages的key）为Demo时，对应的页面配置（router.pages的value）包括：</p>
+<p>· <strong>component</strong>：页面对应的【<strong>ux文件名</strong>】index</p>
+<p>· <strong>path</strong>：页面路径，默认为页面名称Demo</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="string">"router"</span>: &#123;</span><br><span class="line"><span class="string">"pages"</span>: &#123;</span><br><span class="line"><span class="string">"Demo"</span>: &#123;</span><br><span class="line"><span class="string">"component"</span>: <span class="string">"index"</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">"Doc/Layout"</span>: &#123;</span><br><span class="line"><span class="string">"component"</span>: <span class="string">"index"</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>开发者就可以通过/Demo访问到Demo目录下的index.ux页面了，就可以开始快应用的开发了。</p>
+<p>说起快应用，不得不说快应用踩过的坑。 由于快应用处于不断优化阶段，在开发过程中，自然会遇到一些不完善的地方，由于我们对于新技术的掌握还不透彻，也会使得开发中遇到很多的困难。 我将快应用开发的问题罗列到下面，希望对大家的开发有所帮助。</p>
+<p><strong>1.</strong> <strong>stack 模式注意事项</strong></p>
+<p>stack模式下，父级内放入image，将事件作用于stack和div事件触发均有难问题，所以，需要将事件设置到image上。 设置于子级本身。<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e4695495d9ab6?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p><strong>2 . tabs 切换</strong></p>
+<p>如果是自定义组件形式。 tab-bar可以设置为div形式。 当点击每个tab-bar ， 可以切换图片和更换颜色。<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e46a39ff53e1d?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p>在data中设置数据进行切换 。<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e46d1d9be2038?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p><strong>3 ．缺少依赖</strong></p>
+<p>Can’t resolve ‘less-loader’ ,证明缺少 less-loader依赖，直接重新安装依赖即可， 即 npm install less-loader ，其他依赖同理。</p>
+<p><strong>4 .</strong> <strong>返回数据作二次处理再渲染</strong></p>
+<p>如果数据返回的是类型等数字，比如返回为1 ，2 等。 需要将1和2 在渲染的过程中转换为name 和 state ， 则返回的数据需要处理后重新返回新数据即<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e46daa542b2f4?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p><strong>5 ．父子组件传参 （父组件向子组件传参）</strong></p>
+<p>子组件 设置props</p>
+<p> <img src="https://user-gold-cdn.xitu.io/2018/12/25/167e46e6b70889e2?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p>props中的属性作为子组件，遍历 data的值，遍历到每一个是 $item ，代表data1中每一个对象 。获取每个对象，拿到对应属性， 将其放入 页面中。<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e46f4aaabc7a5?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p>父组件的数据形式<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e46fbe37229a1?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p>在父组件中使用子组件<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e470ec1553469?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p><strong>6.</strong> <strong>通过 openssl 命令等工具生成签名文件private.pem、certificate.pem</strong></p>
+<p>如果只是单独vscode 生成证书必须使用openssl，使用命令是直接用不了的。必须安装openssl。</p>
+<p>操作步骤是：</p>
+<p>复制华为的openssl 到项目的同级 D盘的 D:\Program Files，复制OpenSSL-Win64 文件到 D:\Program Files 此位置</p>
+<p>然后设置全局环境变量</p>
+<p>我的电脑 -右键- 属性 -高级-环境变量-path双击- 在最后加分号加openssl路径。 ;D:\Program Files\OpenSSL-Win64\bin</p>
+<p>然后执行命令</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl req -newkey rsa:2048 -nodes -keyout private.pem -x509 -days 3650 -out certificate.pem复制代码</span><br></pre></td></tr></table></figure>
+<p>最后在工程的 sign 目录下创建 release 目录，将私钥文件 private.pem 和证书文件 certificate.pem 拷贝进去。</p>
+<p><strong>7 .</strong> <strong>没有tab-bar，列表无法加载底部问题</strong></p>
+<p>快应用，在隐藏tab-bar的状态 ，列表加载一直是加载中，无法加载到底部。 所以要设置一个padding值，&gt;=2px，否则无法加载到底部。</p>
+<p><strong>8.</strong> <strong>路由传参</strong></p>
+<p>路由传参：（使用时注意引入import router from <a href="mailto:&#39;@system.router" target="_blank" rel="noopener">&#39;@system.router</a>‘;）</p>
+<p>路由传img（参数时），接受时是字符串类型，需做处理才能使用。</p>
+<p>this.detailList = JSON.parse(this.detailList); 使用此方法将\解析。</p>
+<p>可得正常结果例如:<a href="https://blog.csdn.net/shi_yi_fei/article/details/51202209" target="_blank" rel="noopener">https://blog.csdn.net/shi_yi_fei/article/details/51202209</a></p>
+<p><strong>9 ．路由跳转传参</strong></p>
+<p>路由跳转传参（routePagePushWithParams）</p>
+<p>格式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">routePagePushWithParams () &#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 跳转到应用内的某个页面</span></span><br><span class="line"></span><br><span class="line">router.push(&#123;</span><br><span class="line"></span><br><span class="line">uri: <span class="string">'/heroDetail'</span>,</span><br><span class="line"></span><br><span class="line">params: &#123;</span><br><span class="line"></span><br><span class="line">detaiId: <span class="keyword">this</span>.$item.hero_id</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>该路径跳转为heroDetail下的index.ux的文件，</p>
+<p>子组件在接收时注意定义属性最好不为null （否则会出现未知错误）</p>
+<p>例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">protected: &#123;</span><br><span class="line"></span><br><span class="line">detaiId: <span class="string">""</span>（正确）</span><br><span class="line"></span><br><span class="line">detaiId: <span class="literal">null</span>（错误）</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>10.list 瀑布流(不理想)</strong></p>
+<p>布局:</p>
+<p>方案1: list中嵌套两个list-item，list-item中用block循环对应数组中数据。</p>
+<p>缺点:</p>
+<p>list不支持justify-content样式。</p>
+<p>页面出现卡顿。</p>
+<p>方案2: div中嵌套两个list，block循环list-item来展示数据。</p>
+<p>缺点:</p>
+<p>div不能实现页面滚动。</p>
+<p>左右list会独立滚动。</p>
+<p>方案3: list中设置属性columns:2，list-item显示数据信息。</p>
+<p>缺点:</p>
+<p>无法区分两侧数据。</p>
+<p>每个list-item高度相同。</p>
+<p>方案4: list中嵌套一个list-item，list-item中用div分为左右两列列表，div中block循环对应数组中数据。</p>
+<p>缺点:</p>
+<p>页面卡顿。</p>
+<p>第一页内容显示正常，但之后的内容显示不全。</p>
+<p>js: 先定义两个数组，遍历数据根据后台返回的高度来判断添加到哪个数组中。</p>
+<p>总结:</p>
+<p>list内子元素只能单方向滚动，不能换行。</p>
+<p>list、list-item中不可再次嵌套list。</p>
+<p>暂不支持瀑布流</p>
+<p>list-item的type属性是优化list的关键。</p>
+<p>block会被当做透明标签处理，调试时不显示。</p>
+<p><strong>11 ．swiper中多个图片加载</strong></p>
+<p>如果很长很长图片加载时出现图片模糊、被放大（初次加载时出现）</p>
+<p>部分机型(小米)出现一些图片被切割现象。（不可恢复）</p>
+<p>部分机型（华为、oppo）滑动过快，出现图片被切割现象，重新加载可以还原页面。有可能是手机渲染的问题。</p>
+<p><strong>12. 图片编辑</strong></p>
+<p>文档中图形图像目录下，对图片的操作不能操作网络上的图片。</p>
+<p>否则会报202（参数错误）</p>
+<p>uri格式为 uri:’internal://tmp/abc.jpg’</p>
+<p><strong>13. 页面调试</strong></p>
+<p>最初调试时注意版本号以及是否在同一网段。如果手机电脑都使用一个wifi 。但是电脑安装了360wifi等，则会改变网段。请注意必须在同一网段。</p>
+<p>调试时会出现页面突然崩掉，重新加载即可。</p>
+<p>当你npm run watch页面不更新时，重新npm run build的会显示你的错误。</p>
+<p>出现安装失败，确定代码没问题，就清理一下测试机。</p>
+<p><strong>14. 变量</strong></p>
+<p><strong>问题1：</strong>在block循环中直接使用”.length”,可显示length前内容的长度。 例: </p>
+<p><strong>问题2：</strong>当点击图片跳转该图片详情页时，routePagePushWithParams中可直接打印出当前点击图片下的详情信息</p>
+<p>html：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">block</span> <span class="attr">for</span>=<span class="string">"&#123;&#123;imgListMsg&#125;&#125;"</span> @<span class="attr">click</span>=<span class="string">"routePagePushWithParams"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"text-title"</span>&gt;</span>&#123;&#123;$item.title&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>js:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">routePagePushWithParams () &#123;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.$item.title)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 跳转到应用内的某个页面</span></span><br><span class="line"></span><br><span class="line">router.push(&#123;</span><br><span class="line"></span><br><span class="line">uri: <span class="string">'/cosImgDetail'</span>,</span><br><span class="line"></span><br><span class="line">params: &#123;</span><br><span class="line"></span><br><span class="line">detailName: <span class="keyword">this</span>.$item.title,</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>15.css 样式问题</strong></p>
+<p>html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">text</span> <span class="attr">for</span>=<span class="string">"value in $item.reply_list"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">               <span class="tag">&lt;<span class="name">span</span>&gt;</span>用户名称<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line">               用户内容</span><br><span class="line"></span><br><span class="line">       <span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>当给span添加样式时，会覆盖text的样式</p>
+<p>解决办法：给span添加class ，不是直接span标签。</p>
+<p><strong>16.richtext</strong> <strong>样式不可被覆盖</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">richtext</span> <span class="attr">type</span>=<span class="string">"html"</span> <span class="attr">class</span>=<span class="string">"skillCon"</span> &gt;</span></span><br><span class="line"></span><br><span class="line">                &#123;&#123;description&#125;&#125;</span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;/<span class="name">richtext</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>richtext解析返回的html数据。 样式不可被覆盖更改。 需要单独给html更改新的颜色等，不可实现。</p>
+<p><strong>17.if 使用和判断</strong></p>
+<p><img src="C:\Users\lenovo\AppData\Local\Temp\1557062975319.png" alt="1557062975319"></p>
+<p>出现报错</p>
+<p>原因是，列表中尽量少使用if判断，如果使用了。必须保证type值相同的结构type唯一，如果列表中可能出现不同的type则可能报错。最好的解决办法是，使type值不唯一。</p>
+<p>解决办法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type="product-&#123;&#123; listItem.iconList.length &#125;&#125;-&#123;&#123; listItem.coverList.length &#125;&#125;"</span><br></pre></td></tr></table></figure>
+<p><strong>18. 分享问题</strong></p>
+<p>分享问题请注意，申请回来的key。 注意将value值放入到manifext.json。模式是<img src="https://user-gold-cdn.xitu.io/2018/12/25/167e472493dfcaf4?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p>如果platform只有一个，比如只有微信。点击分享的时候，会直接分享到微信页面， 不会调起弹框。如果需要有其他额外的操作在分享页，可以制作假的点击按钮，逐个分享。</p>
+<p><strong>19.swiper 中暂时不支持list组件</strong></p>
+<p>处理办法，如果需要滑动操作，则使用tabs中放入list组件。</p>
+<p><strong>20. list 中图片不能占满全屏处理</strong></p>
+<p>list作为最大的外层容器，内部的background-image或者image 如果不设置高，height：100%；撑不开元素。</p>
+<p>处理办法：给image设置固定的px高度，如果要图片占满全屏，则 device.getInfo可以获取设备的高， 将获取的高给到list-item内的image设置高度。 可以占满全屏。目前不确定是否有兼容性问题。</p>
+<p>如果只有一张固定背景图，而不是list渲染图片，则可以给最大的节点设置背景图，可以占满全屏。</p>
+<p><strong>21.div 下image设置问题</strong></p>
+<p>如果div下直接有一个image。 div设置宽60px高60px，image同样设置宽高60 ，最后渲染的结果可能是60<em>60，60</em>61，61<em>60,59</em>59，会有1像素的问题。目前还是待解决。</p>
+<p>感谢大家阅读这边文章。希望大家能提出宝贵的意见，希望我们能共同见证快应用的成长，享受快应用所带来的极致体验。</p>
 
           
         
